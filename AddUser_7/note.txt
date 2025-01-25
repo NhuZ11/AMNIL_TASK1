@@ -1,0 +1,5 @@
+Create a website to add users in a list
+A form to add users 
+Added users should be visible in a table
+Create a random password generator button and upon clicking the button create random passwords for a particular user in the table.
+After generating a password, the generated password button should be disabled.
