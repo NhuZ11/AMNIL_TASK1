@@ -1,6 +1,7 @@
 import { useState } from 'react'
 import Inputtodo from './Components/Inputtodo'
 import Listtodo from './Components/Listtodo'
+import Searchtodo from './Components/Searchtodo'
 
 function App() {
 
@@ -8,6 +9,7 @@ function App() {
     <>
      <Inputtodo />
      <Listtodo/>
+     <Searchtodo />
     </>
   )
 }

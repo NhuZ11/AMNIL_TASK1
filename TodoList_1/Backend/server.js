@@ -83,3 +83,19 @@ app.delete("/todos/:id", async (req,res)=>{
     
   }
 })
+
+
+//search a todo
+app.post("/search", async (req, res) => {
+  try {
+    const { search } = req.body; 
+    const searchQuery = await pool.query(
+      "SELECT * FROM todo WHERE description ILIKE $1",
+      [`%${search}%`] 
+    );
+    res.json(searchQuery.rows); 
+  } catch (err) {
+    console.error(err.message);
+    res.status(500).send("Server error");
+  }
+});
